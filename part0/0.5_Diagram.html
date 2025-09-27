@@ -1,13 +1,16 @@
+<html>
+    <head>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+</script>
+    </head>
+    <body>
+        <pre class="mermaid">
 sequenceDiagram
     participant browser
     participant server
 
-    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
-    activate server
-    server-->>browser: HTML document
-    deactivate server
-
-    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa
     activate server
     server-->>browser: HTML document
     deactivate server
@@ -17,7 +20,7 @@ sequenceDiagram
     server-->>browser: the css file
     deactivate server
 
-    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa.js
     activate server
     server-->>browser: the JavaScript file
     deactivate server
@@ -26,7 +29,10 @@ sequenceDiagram
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate server
-    server-->>browser: [{"content":":)","date":"2025-09-13T06:26:51.540Z"},...]
+    server-->>browser: [{"content":"ougz","date":"2025-09-26T12:52:04.112Z"},...]
     deactivate server
 
     Note right of browser: The browser executes the callback function that renders the notes
+        </pre>
+    </body>
+</html>

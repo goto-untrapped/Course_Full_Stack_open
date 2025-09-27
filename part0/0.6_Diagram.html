@@ -1,0 +1,20 @@
+<html>
+    <head>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+</script>
+    </head>
+    <body>
+        <pre class="mermaid">
+sequenceDiagram
+    participant browser
+    participant server
+
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+    activate server
+    server-->>browser: {"message":"note created"}
+    deactivate server
+
+        </pre>
+    </body>
+</html>
