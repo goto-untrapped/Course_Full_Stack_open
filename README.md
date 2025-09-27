@@ -1,2 +1,2 @@
-# Course_Full_Stack_open
+# Full_stack_open
 https://fullstackopen.com/en/
